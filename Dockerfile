@@ -1,7 +1,7 @@
 FROM centos
 RUN yum update -y
 RUN yum install wget epel-release -y
-RUN RUN yum install java-1.8.0-openjdk.x86_64 wget -y
+RUN yum install java-1.8.0-openjdk.x86_64 wget -y
 RUN cp /etc/profile /etc/profile_backup && echo 'export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk' | tee -a /etc/profile && echo 'export JRE_HOME=/usr/lib/jvm/jre' | tee -a /etc/profile && source /etc/profile
 RUN wget http://18.202.242.77:8081/repository/devops-java-test/zipkin/jar/1.0/zipkin-server-exec.jar
 CMD java -jar zipkin-server-exec.jar

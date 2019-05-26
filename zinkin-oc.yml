@@ -10,7 +10,7 @@ metadata:
   name: zinkin
   namespace: zinpkin-app
   resourceVersion: '692538'
-  selfLink: /apis/apps.openshift.io/v1/namespaces/cli-test/deploymentconfigs/zinkin
+  selfLink: /apis/apps.openshift.io/v1/namespaces/zinpkin-app/deploymentconfigs/zinkin
   uid: def14de2-7fc0-11e9-acbd-0a1d4167cb58
 spec:
   replicas: 1
@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - image: >-
-            docker-registry.default.svc:5000/cli-test/zinkin@sha256:47fa4ccfedfd355ebc6be106c3c810b83cb572ae43d3a52d09e34912b6a23783
+            docker-registry.default.svc:5000/zinpkin-app/zinkin
           imagePullPolicy: Always
           name: zinkin
           ports:
@@ -64,26 +64,11 @@ spec:
           name: 'zinkin:latest'
           namespace: cli-test
         lastTriggeredImage: >-
-          docker-registry.default.svc:5000/cli-test/zinkin@sha256:47fa4ccfedfd355ebc6be106c3c810b83cb572ae43d3a52d09e34912b6a23783
+          docker-registry.default.svc:5000/zinpkin-app/zinkin
       type: ImageChange
 status:
   availableReplicas: 1
-  conditions:
-    - lastTransitionTime: '2019-05-26T14:16:42Z'
-      lastUpdateTime: '2019-05-26T14:16:42Z'
-      message: Deployment config has minimum availability.
-      status: 'True'
-      type: Available
-    - lastTransitionTime: '2019-05-26T14:16:43Z'
-      lastUpdateTime: '2019-05-26T14:16:43Z'
-      message: replication controller "zinkin-1" successfully rolled out
-      reason: NewReplicationControllerAvailable
-      status: 'True'
-      type: Progressing
   details:
-    causes:
-      - type: ConfigChange
-    message: config change
   latestVersion: 1
   observedGeneration: 2
   readyReplicas: 1

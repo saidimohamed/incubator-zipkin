@@ -62,7 +62,7 @@ spec:
         from:
           kind: ImageStreamTag
           name: 'zinkin:latest'
-          namespace: cli-test
+          namespace: zinpkin-app
         lastTriggeredImage: >-
           docker-registry.default.svc:5000/zinpkin-app/zinkin
       type: ImageChange

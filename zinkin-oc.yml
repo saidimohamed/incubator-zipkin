@@ -2,26 +2,26 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   annotations:
-    openshift.io/deployer-pod.completed-at: '2019-05-26 13:36:51 +0000 UTC'
-    openshift.io/deployer-pod.created-at: '2019-05-26 13:36:41 +0000 UTC'
-    openshift.io/deployer-pod.name: zinkin-3-deploy
-    openshift.io/deployment-config.latest-version: '3'
+    openshift.io/deployer-pod.completed-at: '2019-05-26 13:47:20 +0000 UTC'
+    openshift.io/deployer-pod.created-at: '2019-05-26 13:47:11 +0000 UTC'
+    openshift.io/deployer-pod.name: zinkin-4-deploy
+    openshift.io/deployment-config.latest-version: '4'
     openshift.io/deployment-config.name: zinkin
     openshift.io/deployment.phase: Complete
     openshift.io/deployment.replicas: ''
     openshift.io/deployment.status-reason: config change
     openshift.io/encoded-deployment-config: >
-      {"kind":"DeploymentConfig","apiVersion":"apps.openshift.io/v1","metadata":{"name":"zinkin","namespace":"cli-test","selfLink":"/apis/apps.openshift.io/v1/namespaces/cli-test/deploymentconfigs/zinkin","uid":"eebcf744-7fb9-11e9-acbd-0a1d4167cb58","resourceVersion":"685579","generation":4,"creationTimestamp":"2019-05-26T13:26:56Z","labels":{"app":"zinkin"},"annotations":{"openshift.io/generated-by":"OpenShiftWebConsole"}},"spec":{"strategy":{"type":"Rolling","rollingParams":{"updatePeriodSeconds":1,"intervalSeconds":1,"timeoutSeconds":600,"maxUnavailable":"25%","maxSurge":"25%"},"resources":{},"activeDeadlineSeconds":21600},"triggers":[{"type":"ConfigChange"},{"type":"ImageChange","imageChangeParams":{"automatic":true,"containerNames":["zinkin"],"from":{"kind":"ImageStreamTag","namespace":"cli-test","name":"zinkin:latest"},"lastTriggeredImage":"docker-registry.default.svc:5000/cli-test/zinkin@sha256:6d30546d202be5f1a48e9f2fc8c6a80556b6f412347cdc1d74bbd15dbded5023"}}],"replicas":1,"revisionHistoryLimit":10,"test":false,"selector":{"app":"zinkin","deploymentconfig":"zinkin"},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"zinkin","deploymentconfig":"zinkin"},"annotations":{"openshift.io/generated-by":"OpenShiftWebConsole"}},"spec":{"containers":[{"name":"zinkin","image":"docker-registry.default.svc:5000/cli-test/zinkin@sha256:6d30546d202be5f1a48e9f2fc8c6a80556b6f412347cdc1d74bbd15dbded5023","ports":[{"containerPort":8080,"protocol":"TCP"}],"resources":{},"livenessProbe":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP"},"initialDelaySeconds":60,"timeoutSeconds":2,"periodSeconds":10,"successThreshold":1,"failureThreshold":3},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","imagePullPolicy":"Always"}],"restartPolicy":"Always","terminationGracePeriodSeconds":30,"dnsPolicy":"ClusterFirst","securityContext":{},"schedulerName":"default-scheduler"}}},"status":{"latestVersion":3,"observedGeneration":3,"replicas":1,"updatedReplicas":1,"availableReplicas":1,"unavailableReplicas":0,"details":{"message":"config
+      {"kind":"DeploymentConfig","apiVersion":"apps.openshift.io/v1","metadata":{"name":"zinkin","namespace":"cli-test","selfLink":"/apis/apps.openshift.io/v1/namespaces/cli-test/deploymentconfigs/zinkin","uid":"eebcf744-7fb9-11e9-acbd-0a1d4167cb58","resourceVersion":"687432","generation":5,"creationTimestamp":"2019-05-26T13:26:56Z","labels":{"app":"zinkin"},"annotations":{"openshift.io/generated-by":"OpenShiftWebConsole"}},"spec":{"strategy":{"type":"Rolling","rollingParams":{"updatePeriodSeconds":1,"intervalSeconds":1,"timeoutSeconds":600,"maxUnavailable":"25%","maxSurge":"25%"},"resources":{},"activeDeadlineSeconds":21600},"triggers":[{"type":"ConfigChange"},{"type":"ImageChange","imageChangeParams":{"automatic":true,"containerNames":["zinkin"],"from":{"kind":"ImageStreamTag","namespace":"cli-test","name":"zinkin:latest"},"lastTriggeredImage":"docker-registry.default.svc:5000/cli-test/zinkin@sha256:6d30546d202be5f1a48e9f2fc8c6a80556b6f412347cdc1d74bbd15dbded5023"}}],"replicas":1,"revisionHistoryLimit":10,"test":false,"selector":{"app":"zinkin","deploymentconfig":"zinkin"},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"zinkin","deploymentconfig":"zinkin"},"annotations":{"openshift.io/generated-by":"OpenShiftWebConsole"}},"spec":{"containers":[{"name":"zinkin","image":"docker-registry.default.svc:5000/cli-test/zinkin@sha256:6d30546d202be5f1a48e9f2fc8c6a80556b6f412347cdc1d74bbd15dbded5023","ports":[{"containerPort":8080,"protocol":"TCP"}],"resources":{},"livenessProbe":{"httpGet":{"path":"/","port":9411,"scheme":"HTTP"},"initialDelaySeconds":60,"timeoutSeconds":2,"periodSeconds":10,"successThreshold":1,"failureThreshold":3},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","imagePullPolicy":"Always"}],"restartPolicy":"Always","terminationGracePeriodSeconds":30,"dnsPolicy":"ClusterFirst","securityContext":{},"schedulerName":"default-scheduler"}}},"status":{"latestVersion":4,"observedGeneration":4,"replicas":1,"updatedReplicas":1,"availableReplicas":1,"unavailableReplicas":0,"details":{"message":"config
       change","causes":[{"type":"ConfigChange"}]},"conditions":[{"type":"Available","status":"True","lastUpdateTime":"2019-05-26T13:27:02Z","lastTransitionTime":"2019-05-26T13:27:02Z","message":"Deployment
       config has minimum
-      availability."},{"type":"Progressing","status":"True","lastUpdateTime":"2019-05-26T13:34:56Z","lastTransitionTime":"2019-05-26T13:34:53Z","reason":"NewReplicationControllerAvailable","message":"replication
-      controller \"zinkin-2\" successfully rolled out"}],"readyReplicas":1}}
-  creationTimestamp: '2019-05-26T13:36:41Z'
-  generation: 2
+      availability."},{"type":"Progressing","status":"True","lastUpdateTime":"2019-05-26T13:36:51Z","lastTransitionTime":"2019-05-26T13:36:49Z","reason":"NewReplicationControllerAvailable","message":"replication
+      controller \"zinkin-3\" successfully rolled out"}],"readyReplicas":1}}
+  creationTimestamp: '2019-05-26T13:47:11Z'
+  generation: 3
   labels:
     app: zinkin
     openshift.io/deployment-config.name: zinkin
-  name: zinkin-3
+  name: zinkin-4
   namespace: cli-test
   ownerReferences:
     - apiVersion: apps.openshift.io/v1
@@ -30,26 +30,26 @@ metadata:
       kind: DeploymentConfig
       name: zinkin
       uid: eebcf744-7fb9-11e9-acbd-0a1d4167cb58
-  resourceVersion: '685658'
-  selfLink: /api/v1/namespaces/cli-test/replicationcontrollers/zinkin-3
-  uid: 4b8db3d3-7fbb-11e9-acbd-0a1d4167cb58
+  resourceVersion: '687818'
+  selfLink: /api/v1/namespaces/cli-test/replicationcontrollers/zinkin-4
+  uid: c310d015-7fbc-11e9-acbd-0a1d4167cb58
 spec:
   replicas: 1
   selector:
     app: zinkin
-    deployment: zinkin-3
+    deployment: zinkin-4
     deploymentconfig: zinkin
   template:
     metadata:
       annotations:
-        openshift.io/deployment-config.latest-version: '3'
+        openshift.io/deployment-config.latest-version: '4'
         openshift.io/deployment-config.name: zinkin
-        openshift.io/deployment.name: zinkin-3
+        openshift.io/deployment.name: zinkin-4
         openshift.io/generated-by: OpenShiftWebConsole
       creationTimestamp: null
       labels:
         app: zinkin
-        deployment: zinkin-3
+        deployment: zinkin-4
         deploymentconfig: zinkin
     spec:
       containers:
@@ -60,7 +60,7 @@ spec:
             failureThreshold: 3
             httpGet:
               path: /
-              port: 8080
+              port: 9411
               scheme: HTTP
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -68,7 +68,7 @@ spec:
             timeoutSeconds: 2
           name: zinkin
           ports:
-            - containerPort: 8080
+            - containerPort: 9411
               protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -81,6 +81,6 @@ spec:
 status:
   availableReplicas: 1
   fullyLabeledReplicas: 1
-  observedGeneration: 2
+  observedGeneration: 3
   readyReplicas: 1
   replicas: 1

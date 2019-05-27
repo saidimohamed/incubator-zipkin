@@ -79,17 +79,27 @@ status:
 kind: Service
 apiVersion: v1
 metadata:
-  name: frontend-prod
+  name: frontend
 spec:
   ports:
   - name: web
     protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 9411
+    targetPort: 9411
     nodePort: 0
   selector:
-    name: frontend-prod
+    name: frontend
   type: ClusterIP
   sessionAffinity: None
 status:
   loadBalancer: {}
+kind: Route
+apiVersion: v1
+metadata:
+  name: frontend
+spec:
+  to:
+    kind: Service
+    name: frontend
+  tls:
+    termination: edge

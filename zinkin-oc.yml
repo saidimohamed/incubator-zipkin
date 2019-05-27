@@ -75,31 +75,4 @@ status:
   replicas: 1
   unavailableReplicas: 0
   updatedReplicas: 1
-  
-kind: Service
-apiVersion: v1
-metadata:
-  name: frontend
-spec:
-  ports:
-  - name: web
-    protocol: TCP
-    port: 9411
-    targetPort: 9411
-    nodePort: 0
-  selector:
-    name: frontend
-  type: ClusterIP
-  sessionAffinity: None
-status:
-  loadBalancer: {}
-kind: Route
-apiVersion: v1
-metadata:
-  name: frontend
-spec:
-  to:
-    kind: Service
-    name: frontend
-  tls:
-    termination: edge
+

@@ -11,7 +11,7 @@ spec:
     targetPort: 9411
     nodePort: 0
   selector:
-    name: frontend
+    name: zinkin
   type: ClusterIP
   sessionAffinity: None
 status:

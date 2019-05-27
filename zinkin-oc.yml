@@ -75,3 +75,21 @@ status:
   replicas: 1
   unavailableReplicas: 0
   updatedReplicas: 1
+  
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend-prod
+spec:
+  ports:
+  - name: web
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 0
+  selector:
+    name: frontend-prod
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}

@@ -1,0 +1,18 @@
+  
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend
+spec:
+  ports:
+  - name: web
+    protocol: TCP
+    port: 9411
+    targetPort: 9411
+    nodePort: 0
+  selector:
+    name: frontend
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}

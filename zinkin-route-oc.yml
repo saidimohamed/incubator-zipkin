@@ -1,0 +1,10 @@
+kind: Route
+apiVersion: v1
+metadata:
+  name: frontend
+spec:
+  to:
+    kind: Service
+    name: frontend
+  tls:
+    termination: edge

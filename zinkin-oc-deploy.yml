@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: zinkin
-  namespace: zinpkin-app
+  namespace: zinkin-app
 spec:
   selector:
     matchLabels:

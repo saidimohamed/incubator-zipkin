@@ -62,7 +62,7 @@ spec:
         from:
           kind: ImageStreamTag
           name: 'zinkin:latest'
-          namespace: zinpkin-app
+          namespace: zinkin-app
         lastTriggeredImage: >-
           image-registry.openshift-image-registry.svc:5000/zinkin-app/zinkin
       type: ImageChange

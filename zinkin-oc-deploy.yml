@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: zinkin
-          image: image-registry.openshift-image-registry.svc:5000/zinpkin-app/zinkin
+          image: image-registry.openshift-image-registry.svc:5000/zinkin-app/zinkin
           ports:
             - containerPort: 9411

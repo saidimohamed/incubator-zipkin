@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - image: >-
-            docker-registry.default.svc:5000/zinpkin-app/zinkin
+            docker-registry.default.svc:5000/zinkin-app/zinkin
           imagePullPolicy: Always
           name: zinkin
           ports:

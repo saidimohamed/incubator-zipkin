@@ -10,7 +10,7 @@ metadata:
   name: zinkin
   namespace: zinkin-app
   resourceVersion: '692538'
-  selfLink: /apis/apps.openshift.io/v1/namespaces/zinpkin-app/deploymentconfigs/zinkin
+  selfLink: /apis/apps.openshift.io/v1/namespaces/zinkin-app/deploymentconfigs/zinkin
   uid: def14de2-7fc0-11e9-acbd-0a1d4167cb58
 spec:
   replicas: 1
@@ -64,7 +64,7 @@ spec:
           name: 'zinkin:latest'
           namespace: zinpkin-app
         lastTriggeredImage: >-
-          docker-registry.default.svc:5000/zinpkin-app/zinkin
+          docker-registry.default.svc:5000/zinkin-app/zinkin
       type: ImageChange
 status:
   availableReplicas: 1

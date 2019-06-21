@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - image: >-
-            docker-registry.default.svc:5000/zinkin-app/zinkin
+            image-registry.openshift-image-registry.svc:5000/zinkin-app/zinkin
           imagePullPolicy: Always
           name: zinkin
           ports:
@@ -64,7 +64,7 @@ spec:
           name: 'zinkin:latest'
           namespace: zinpkin-app
         lastTriggeredImage: >-
-          docker-registry.default.svc:5000/zinkin-app/zinkin
+          image-registry.openshift-image-registry.svc:5000/zinkin-app/zinkin
       type: ImageChange
 status:
   availableReplicas: 1
